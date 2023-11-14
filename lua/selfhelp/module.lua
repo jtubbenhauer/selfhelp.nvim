@@ -79,9 +79,9 @@ M.display_help = function()
   vim.api.nvim_buf_set_lines(bufnr, 0, -1, true, lines)
   local ns = vim.api.nvim_create_namespace("SelfHelp")
   for _, hl in ipairs(highlights) do
-    local hl_group, lnum, start_col, end_col = unpack(hl)
-    end_col = math.min(end_col, string.len(lines[lnum]))
-    vim.api.nvim_buf_set_extmark(bufnr, ns, lnum - 1, start_col, {
+    local hl_group, hl_lnum, start_col, end_col = unpack(hl)
+    end_col = math.min(end_col, string.len(lines[hl_lnum]))
+    vim.api.nvim_buf_set_extmark(bufnr, ns, hl_lnum - 1, start_col, {
       end_col = end_col,
       hl_group = hl_group,
     })
