@@ -10,7 +10,9 @@ A simple Neovim plugin to display a floating help dialog displaying your custom 
 ## Installation
 
 Lazy.nvim
-`{ 'jtubbenhauer/selfhelp.nvim' }'
+```
+{ 'jtubbenhauer/selfhelp.nvim' }
+```
 
 ## Usage
 
